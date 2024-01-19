@@ -1,0 +1,550 @@
+.banner {
+    height: 656px;
+    position: relative;
+    z-index: 0;
+
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: -70px;
+        left: 0;
+        width: 100%;
+        height: 160px;
+        background: url(#{$assetPath}/banner-bottom.svg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .banner-content {
+        padding: 30px 30px;
+        position: absolute;
+        right: 43px;
+        bottom: 0;
+        background: rgba(121, 128, 98, 0.80);
+        max-width: 647px;
+        z-index: 123;
+
+        h1 {
+            color: $color-white
+        }
+
+        p {
+            color: $color-white;
+            font-size: 28px;
+            line-height: 1.2;
+
+            @media (max-width: $breakpoint-md + "px") {
+                font-size: 20px;
+            }
+
+        }
+
+    }
+
+}
+
+.award-recipients {
+    z-index: 123;
+    position: relative;
+    padding-top: 60px;
+    padding-bottom: 0;
+
+    h2 {
+        text-align: center;
+        color: $color-primary
+    }
+
+    .award-recipients-list {
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            li {
+                width: 25%;
+                margin-bottom: 45px;
+                text-align: center;
+
+                @media (max-width: $breakpoint-lg + "px") {
+                    width: 33.33%;
+                }
+
+                @media (max-width: $breakpoint-md + "px") {
+                    width: 50%;
+                }
+
+                @media (max-width: $breakpoint-sm + "px") {
+                    width: 100%;
+                }
+
+                img {
+                    width: 215px;
+                    height: 215px;
+                    object-fit: cover;
+                    overflow: hidden;
+                    border-radius: 100%
+                }
+
+                h4 {
+                    margin-bottom: 0;
+                }
+
+            }
+
+        }
+
+        .btn {
+            display: table;
+            margin: 0 auto
+        }
+
+    }
+
+}
+
+.nominate {
+    background: $grey-light;
+    position: relative;
+    padding: 0 0 29px;
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: -77px;
+        left: 0;
+        width: 100%;
+        height: 160px;
+        background: url(#{$assetPath}/award-recipients-bottom.svg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .container {
+        padding-top: 150px;
+
+        @media (max-width: $breakpoint-md + "px") {
+            padding-top: 120px;
+        }
+
+
+        h2 {
+            text-align: center;
+            margin-bottom: 23px;
+            line-height: 1;
+        }
+
+        p {
+            text-align: center;
+            font-weight: $font-w-300;
+            font-family: $font-primary;
+            max-width: 835px;
+            margin: 0 auto 64px;
+
+            span {
+                font-weight: $font-w-400;
+            }
+
+        }
+
+    }
+
+    .nominate-content {
+        justify-content: space-between;
+        align-items: flex-start;
+
+        ol {
+            margin-left: 20px;
+
+            li {
+                font-weight: $font-w-300;
+                font-family: $font-primary;
+                font-size: 20px;
+                margin-bottom: 26px;
+
+                @media (max-width: $breakpoint-lg + "px") {
+                    font-size: 17px;
+                }
+
+                span {
+                    font-weight: $font-w-400;
+                }
+
+                &:last-child {
+                    margin-bottom: 0
+                }
+
+            }
+
+        }
+
+        h5 {
+            font-size: 20px;
+            font-weight: $font-w-400;
+            line-height: 30px;
+            margin-top: 29px;
+            margin-bottom: 10px;
+
+            &:first-child {
+                margin-top: 0
+            }
+
+        }
+
+    }
+
+    .nominate-content-left {
+        width: 49%;
+        background: $color-white;
+        padding: 30px 33px;
+
+
+        @media (max-width: $breakpoint-lg + "px") {
+            padding: 20px 20px;
+            width: 45%;
+
+        }
+
+        @media (max-width: $breakpoint-md + "px") {
+            width: 100%;
+        }
+
+
+        h5 {
+            margin-bottom: 19px;
+        }
+
+    }
+
+    .nominate-content-right {
+        width: 49%;
+        padding: 30px;
+
+
+        @media (max-width: $breakpoint-lg + "px") {
+            padding: 20px 20px;
+            width: 55%;
+
+        }
+
+        @media (max-width: $breakpoint-md + "px") {
+            width: 100%;
+            padding-right: 0;
+            padding-left: 0;
+        }
+
+        p {
+            text-align: left;
+            font-size: 20px;
+            font-family: $font-abel;
+            padding-top: 20px;
+
+            @media (max-width: $breakpoint-md + "px") {
+                margin-bottom: 0
+            }
+        }
+
+        .btn {
+            margin-right: 20px;
+
+            @media (max-width: $breakpoint-lg + "px") {
+                margin-right: 2px;
+            }
+
+        }
+
+        h5 {
+            &:first-child {
+                margin-top: 13px;
+            }
+
+        }
+
+    }
+
+}
+
+.life-is-precious {
+    background: $color-primary;
+    padding-top: 73px;
+    padding-bottom: 84px;
+
+    @media (max-width: $breakpoint-md + "px") {
+        padding-top: 53px;
+        padding-bottom: 44px;
+    }
+
+    h2 {
+        color: $color-white;
+        text-align: center;
+        line-height: 1;
+        font-size: 36px;
+        font-weight: $font-w-700;
+
+        @media (max-width: $breakpoint-md + "px") {
+            font-size: 26px;
+        }
+
+    }
+
+    .life-is-precious-box {
+        justify-content: space-between;
+        padding: 40px 60px 0;
+
+        @media (max-width: $breakpoint-lg + "px") {
+            padding: 40px 0px 0;
+        }
+
+
+        .life-is-precious-box-list {
+            width: 32%;
+            background: $color-white;
+            text-align: center;
+
+            margin-bottom: 20px;
+
+            @media (max-width: $breakpoint-md + "px") {
+                width: 100%;
+            }
+
+            a {
+                display: block;
+                padding: 30px 18px;
+            }
+
+            h4 {
+                font-size: 20px;
+                font-weight: $font-w-700;
+                line-height: 26px;
+                margin-bottom: 8px;
+                margin-top: 6px;
+
+
+            }
+
+            p {
+                font-size: 16px;
+                line-height: 24px
+            }
+
+        }
+
+    }
+
+}
+
+.humanitarianism {
+    padding: 95px 0 88px 0;
+
+    @media (max-width: $breakpoint-md + "px") {
+        padding: 45px 0 48px 0;
+    }
+
+    h2 {
+        text-align: center;
+        line-height: 1;
+        margin-bottom: 32px;
+    }
+
+    ul {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        li {
+            line-height: 18px;
+            border-right: 1px solid $text-color;
+            padding: 0 10px;
+            font-family: $font-abel;
+            font-size: 20px;
+            margin-bottom: 10px;
+
+            &:last-child {
+                border-right: 0;
+                padding-right: 0
+            }
+
+            a {
+                text-decoration: underline;
+            }
+
+        }
+
+    }
+
+    .humanitarianism-box {
+        align-items: center;
+        margin: 65px -12px 0;
+
+        div {
+            width: auto;
+            padding: 0 12px;
+
+            @media (max-width: $breakpoint-md + "px") {
+                padding: 0 8px;
+            }
+        }
+
+        .item-1 {
+            @media (max-width: $breakpoint-xl + "px") {
+                width: 25%;
+            }
+
+            @media (max-width: $breakpoint-md + "px") {
+                width: 27%;
+            }
+
+
+        }
+
+        .item-2 {
+            @media (max-width: $breakpoint-xl + "px") {
+                width: 45%;
+            }
+
+            @media (max-width: $breakpoint-md + "px") {
+                width: 42%;
+            }
+
+
+        }
+
+        .item-3 {
+            @media (max-width: $breakpoint-xl + "px") {
+                width: 30%;
+            }
+
+            @media (max-width: $breakpoint-md + "px") {
+                width: 31%;
+            }
+
+
+        }
+
+    }
+
+}
+
+.testimonials {
+    max-width: 949px;
+    margin: 85px auto 0;
+
+    @media (max-width: $breakpoint-xl + "px") {
+        margin: 45px auto 0;
+    }
+
+    h2 {
+        text-align: center;
+        font-family: $font-abel;
+        font-weight: $font-w-400;
+        text-transform: none;
+        color: $color-primary;
+        letter-spacing: 0;
+    }
+
+    span {
+        text-align: center;
+        display: block;
+        font-size: 20px;
+        font-family: $font-abel
+    }
+
+}
+
+.video-content {
+    .d-flex {
+        margin: 0 -16px;
+    }
+}
+
+.four {
+    &.columns {
+        width: 20%;
+        padding: 0 16px;
+
+        @media (max-width: $breakpoint-xl + "px") {
+            width: 25%;
+        }
+
+        @media (max-width: $breakpoint-md + "px") {
+            width: 33.33%;
+        }
+
+        @media (max-width: $breakpoint-sm + "px") {
+            width: 50%;
+            padding: 0 10px;
+        }
+
+        &>div {
+            float: none;
+            margin: 0;
+        }
+
+        a {
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        p {
+            margin-top: 10px
+        }
+    }
+}
+
+
+.inner-content {
+    padding-top: 63px;
+    padding-bottom: 50px;
+
+    .inner-container {
+        max-width: 975px;
+        margin: 0 auto;
+
+        h2 {
+            text-align: center;
+            font-family: $font-abel;
+            font-size: 32px;
+            font-weight: 400;
+            line-height: 1.3em;
+            margin-bottom: 35px;
+        }
+
+        .about-gallery {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .four {
+            &.columns {
+                width: 25%;
+
+                p {
+                    color: #233343;
+                    font-family: $font-primary;
+                    font-size: 20px;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}
+
+.filter-form {
+    .search-input {
+        width: 58% !important;
+    }
+
+    .search-select {
+        width: 15% !important;
+        span{
+            opacity: .5;
+        }
+    }
+
+    .search-select:last-child {
+        width: 15%;
+    }
+}

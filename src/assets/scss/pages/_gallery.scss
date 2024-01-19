@@ -1,0 +1,205 @@
+.filter-form {
+    display: flex;
+    gap: 30px;
+
+    .search-input,
+    .search-select {
+        background-color: transparent;
+        border: 1px solid #fff;
+        color: #fff;
+        width: 100%;
+        height: 52px;
+    }
+
+    .search-input {
+        padding: 14px 55px;
+        background: url("../../src/assets/images/icons/magnifying-glass.svg") no-repeat 20px center;
+
+        &::-webkit-input-placeholder {
+            color: #fff;
+        }
+
+        &:-ms-input-placeholder {
+            color: #fff;
+        }
+
+        &::placeholder {
+            color: #fff;
+        }
+    }
+
+    .search-select {
+        padding: 14px;
+
+        option {
+            background-color: #798062;
+            padding: 5px;
+        }
+    }
+}
+
+.gallery-filter {
+    background-color: #798062;
+    padding: 60px 0;
+
+    .title {
+        text-align: center;
+        color: #ffffff;
+        margin: 0 0 40px;
+        line-height: 1em;
+    }
+}
+
+.section-gallery {
+    padding: 74px 0 135px;
+}
+
+.grid-item {
+    position: relative;
+    width: 20%;
+    margin-bottom: 40px;
+
+    .image-container {
+        position: relative;
+        text-align: center;
+        width: 200px;
+        height: 200px;
+
+        a {
+            display: inline-block;
+            background-color: #798062;
+            width: 200px;
+            height: 200px;
+            overflow: hidden;
+
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .year-overlay {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: fit-content;
+            padding: 5px 10px;
+            background-color: #798062;
+            color: #FFF;
+            font-family: $font-primary;
+            font-size: 16px;
+            font-weight: 500;
+        }
+    }
+
+    .title {
+        text-align: center;
+        margin-bottom: 0;
+        margin-top: 14px;
+
+        a {
+            color: #233343;
+            font-family: $font-primary;
+            font-size: 24px;
+            font-weight: 500;
+        }
+    }
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+
+    .grid-item:nth-child(4n-2) {
+        .year-overlay {}
+    }
+
+    .grid-item:nth-child(4n-1) {
+        .year-overlay {}
+    }
+
+    .grid-item:nth-child(4n) {
+        .year-overlay {}
+    }
+}
+
+
+.recipient-details-header {
+    background-color: #798062;
+    text-align: center;
+    padding-top: 60px;
+    margin-bottom: 150px;
+
+    .container {
+        position: relative;
+    }
+
+    .back-link {
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: #ffffff;
+        font-size: 20px;
+        font-weight: 500;
+
+        &:before {
+            content: "\2190";
+            border-radius: 50%;
+            display: inline-block;
+            width: 44px;
+            height: 44px;
+            background-color: #fff;
+            color: #798062;
+            vertical-align: middle;
+            line-height: 41px;
+            text-align: center;
+            font-size: 24px;
+            margin-right: 15px;
+        }
+
+    }
+
+    .image-container {
+        margin-top: 40px;
+        display: inline-block;
+        margin-bottom: -150px;
+
+        .avatar {
+            position: relative;
+            margin-bottom: 20px;
+
+            img {
+                display: block;
+                background-color: #798062;
+                width: 228px;
+                height: 228px;
+                overflow: hidden;
+                border-radius: 50%;
+                object-fit: cover;
+                border: 5px solid #ffffff;
+            }
+        }
+
+        .year-overlay {
+            color: #798062;
+            font-size: 24px;
+            font-weight: 500;
+            position: absolute;
+            text-align: center;
+            left: 50%;
+            margin-left: -62px;
+            bottom: -13px;
+            width: 124px;
+            height: 41px;
+            padding-top: 10px;
+
+        }
+    }
+
+    .title {
+        text-align: center;
+        margin: 0;
+    }
+}
